@@ -18,15 +18,8 @@ desktop.ini
 *.log
 *.bak
 
-# 大文件（不同步）
+# 项目资料（大文件，不同步）
 项目库/项目资料/**/*
-*.pdf
-*.docx
-*.doc
-*.xlsx
-*.xls
-*.pptx
-*.ppt
 
 # 敏感信息
 *.env
