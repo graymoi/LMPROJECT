@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>精准谋划知识库 - T-2026-001</title>
+<style>
+@page {
+    size: A4;
+    margin: 1.2cm;
+}
+body {
+    font-family: SimSun, "Microsoft YaHei", sans-serif;
+    font-size: 9pt;
+    line-height: 1.4;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 5mm;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 6px 0;
+    font-size: 8pt;
+}
+th, td {
+    border: 1px solid #666;
+    padding: 3px 6px;
+    text-align: left;
+}
+th {
+    background-color: #e0e0e0;
+}
+h1 {
+    color: #333;
+    font-size: 14pt;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+}
+h2 {
+    color: #444;
+    font-size: 11pt;
+    border-bottom: 1px solid #999;
+    padding-bottom: 3px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+h3 {
+    color: #555;
+    font-size: 9pt;
+    margin-top: 6px;
+    margin-bottom: 3px;
+}
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 8px 0;
+}
+ul {
+    margin: 3px 0;
+    padding-left: 18px;
+}
+li {
+    margin: 1px 0;
+}
+p {
+    margin: 3px 0;
+}
+
+/* 5层架构图样式 */
+.arch-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 8px 0;
+}
+.arch-layer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #666;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.arch-layer-num {
+    background: #4a90d9;
+    color: white;
+    padding: 6px 8px;
+    font-weight: bold;
+    font-size: 8pt;
+    min-width: 60px;
+    text-align: center;
+}
+.arch-layer-name {
+    background: #e8f4fc;
+    padding: 6px 10px;
+    font-weight: bold;
+    font-size: 8pt;
+    min-width: 80px;
+}
+.arch-layer-content {
+    padding: 4px 8px;
+    font-size: 7pt;
+    flex: 1;
+    background: #fff;
+}
+.layer-1 .arch-layer-num { background: #27ae60; }
+.layer-2 .arch-layer-num { background: #3498db; }
+.layer-3 .arch-layer-num { background: #9b59b6; }
+.layer-4 .arch-layer-num { background: #e67e22; }
+.layer-5 .arch-layer-num { background: #e74c3c; }
+
+/* 文件夹结构样式 */
+.folder-tree {
+    font-family: Consolas, monospace;
+    font-size: 8pt;
+    background: #f8f8f8;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 6px 0;
+}
+.folder {
+    color: #e67e22;
+    font-weight: bold;
+}
+.file {
+    color: #3498db;
+}
+
+/* 流程图样式 */
+.flow-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 0;
+    padding: 6px;
+    background: #f0f7ff;
+    border-radius: 3px;
+}
+.flow-box {
+    background: #3498db;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 7pt;
+    text-align: center;
+}
+.flow-arrow {
+    color: #3498db;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+/* 两列布局 */
+.two-col {
+    display: flex;
+    gap: 10px;
+}
+.col {
+    flex: 1;
+}
+
+/* 核心定位高亮 */
+.highlight-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 10pt;
+    font-weight: bold;
+    margin: 8px 0;
+}
+</style>
+</head>
+<body>
+
+<h1>精准谋划知识库</h1>
+<p style="text-align: center; color: #666; margin-top: -5px; margin-bottom: 10px;">政策咨询智能工具 | T-2026-001</p>
+
+<div class="highlight-box">
+AI驱动的政策咨询 + 资金申报 + 项目谋划一体化解决方案
+</div>
+
+<h2>一、完成情况</h2>
+<table>
+<tr><th>模块</th><th>状态</th><th>说明</th></tr>
+<tr><td>文件夹</td><td>✅ 已完成</td><td>全部本地化</td></tr>
+<tr><td>数据库</td><td>✅ 已完成</td><td>RAG解析 + 显性规则 + 隐性知识 + 密文隔离</td></tr>
+<tr><td>规则库</td><td>✅ 已完成</td><td>分类规则体系</td></tr>
+<tr><td>模型</td><td>⏳ 云端运行</td><td>暂用云端模型，未来本地化</td></tr>
+</table>
+
+<h2>二、5层架构图</h2>
+<div class="arch-container">
+    <div class="arch-layer layer-1">
+        <div class="arch-layer-num">第1层</div>
+        <div class="arch-layer-name">用户服务层</div>
+        <div class="arch-layer-content">政策咨询 | 资金申报 | 项目谋划 | 专家问答</div>
+    </div>
+    <div class="arch-layer layer-2">
+        <div class="arch-layer-num">第2层</div>
+        <div class="arch-layer-name">AI应用层</div>
+        <div class="arch-layer-content">意图识别 | 智能检索 | 答案生成 | 模板生成</div>
+    </div>
+    <div class="arch-layer layer-3">
+        <div class="arch-layer-num">第3层</div>
+        <div class="arch-layer-name">数据存储层</div>
+        <div class="arch-layer-content">政策法规 | 申报指南 | 项目案例 | 谋划方法</div>
+    </div>
+    <div class="arch-layer layer-4">
+        <div class="arch-layer-num">第4层</div>
+        <div class="arch-layer-name">数据处理层</div>
+        <div class="arch-layer-content">内容提取 | 元数据提取 | 分类打标 | 向量化存储</div>
+    </div>
+    <div class="arch-layer layer-5">
+        <div class="arch-layer-num">第5层</div>
+        <div class="arch-layer-name">数据采集层</div>
+        <div class="arch-layer-content">政府网站 | 政府公报 | 申报通知 | 项目资料</div>
+    </div>
+</div>
+
+<h2>三、知识库文件夹结构</h2>
+<div class="folder-tree">
+<div class="folder">📁 精准谋划知识库/</div>
+<div style="margin-left: 15px;"><span class="folder">📁 00_政策法规/</span> <span style="color:#666;"># 政策咨询核心</span></div>
+<div style="margin-left: 15px;"><span class="folder">📁 01_资金申报指南/</span> <span style="color:#666;"># 资金申报核心</span></div>
+<div style="margin-left: 15px;"><span class="folder">📁 02_项目案例库/</span> <span style="color:#666;"># 精准谋划参考</span></div>
+<div style="margin-left: 15px;"><span class="folder">📁 03_谋划方法论/</span> <span style="color:#666;"># 精准谋划核心</span></div>
+<div style="margin-left: 15px;"><span class="folder">📁 04_专家问答库/</span> <span style="color:#666;"># 辅助推理</span></div>
+<div style="margin-left: 15px;"><span class="folder">📁 08_对话记录归档/</span> <span style="color:#666;"># 历史对话</span></div>
+<div style="margin-left: 15px;"><span class="folder">📁 09_规则体系/</span> <span style="color:#666;"># 文件分类规则</span></div>
+</div>
+
+<h2>四、核心功能流程</h2>
+<div class="flow-container">
+    <div class="flow-box">查询<br/>逆向发现</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box">出报告<br/>自动生成</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box">出拼盘方案<br/>多渠道组合</div>
+</div>
+
+<h2>五、应用场景</h2>
+<div class="two-col">
+<div class="col">
+<h3>当前应用</h3>
+<ul>
+<li><strong>资金拼盘报告</strong>：河东区城建谋划项目</li>
+<li><strong>单一项目评价</strong>：可行性评估</li>
+</ul>
+</div>
+<div class="col">
+<h3>配套工具</h3>
+<ul>
+<li>新闻搜集插件：自动归档</li>
+<li>案例脱敏工具：项目入库</li>
+</ul>
+</div>
+</div>
+
+<h2>六、运行环境与规划</h2>
+<table>
+<tr><th>项目</th><th>当前</th><th>未来</th></tr>
+<tr><td>运行环境</td><td>个人平台本地电脑</td><td>封装软件/线上平台</td></tr>
+<tr><td>模型部署</td><td>云端运行</td><td>本地化部署</td></tr>
+<tr><td>用户模式</td><td>个人使用</td><td>支持用户上传数据</td></tr>
+</table>
+
+<h2>七、成果清单</h2>
+<div class="two-col">
+<div class="col">
+<h3>文档（7个）</h3>
+<ul>
+<li>README.md</li>
+<li>工作流程汇报.md</li>
+<li>应用平台需求书.md</li>
+<li>智能体说明.md</li>
+<li>精准谋划知识库完整工作流详解.md</li>
+<li>项目说明文档.md</li>
+<li>省级政策索引.md</li>
+</ul>
+</div>
+<div class="col">
+<h3>流程图（5张）</h3>
+<ul>
+<li>01_整体架构图.png</li>
+<li>02_政策法规工作流程图.png</li>
+<li>03_完整工作流程图.png</li>
+<li>04_用户服务流程图.png</li>
+<li>05_数据流向图.png</li>
+</ul>
+</div>
+</div>
+
+<hr>
+<p style="text-align: center; color: #999; font-size: 7pt;">
+文档位置：工作记录/260226/政策知识库/ | 归档位置：项目库/T-2026-001/
+</p>
+
+</body>
+</html>
